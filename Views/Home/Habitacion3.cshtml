@@ -1,0 +1,22 @@
+<div class="container p-5 my-5 bg-dark text-white">
+    <img src="/img/acertijo3.jpg" alt="acertijo3" class="img-thumbnail">
+    <span class="ms-5">¿Como se llama este cuento?</span>
+    <form class="mt-5" action='@Url.Action("Habitacion", "Home")'>
+        <input type="hidden" name="sala" value="3">
+        <input type="text" name="clave" value="">
+        <input type="submit" class="btn btn-outline-primary">
+    </form>
+    <button data-bs-toggle="collapse" data-bs-target="#pista">Pista</button>
+    <div id="pista" class="collapse">Sopla, sopla y sopla y la casa no cae.</div>
+    @{
+        if (ViewBag.MensajeError != null)
+        {
+            <br>
+            <br>
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Error!</strong> Respuesta incorrecta.
+            </div>
+        }
+    }
+</div>
