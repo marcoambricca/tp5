@@ -15,13 +15,14 @@ public class HomeController : Controller
     }
     public IActionResult Habitacion(int sala, string clave)
     {
-        if((!Escape.ResolverSala(sala, clave)) && (sala != 0)){
+        ViewBag.tiempo = (DateTime.Now - Escape.GetTiempo()).Seconds;
+        if(((sala != 0) && !Escape.ResolverSala(sala, clave))){
             ViewBag.MensajeError = "Respuesta incorrecta!!!";
         }
         if(Escape.GetEstadoJuego() == 5){
+            ViewBag.CantErrores = Escape.GetErrores();
             return View("Victoria");
         }
-            
         return View("Habitacion"+Escape.GetEstadoJuego());
     }
     public IActionResult Victoria()
