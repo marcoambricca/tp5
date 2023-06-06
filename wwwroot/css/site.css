@@ -23,3 +23,10 @@ footer {
 h1 {
   text-align: center;
 }
+
+.reloj {
+  font-size: 1.5rem;
+  padding: 2px;
+  border: 1px solid white;
+  margin-bottom: 5px;
+}

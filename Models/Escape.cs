@@ -6,6 +6,7 @@ public static class Escape {
     public static int GetErrores(){return Errores;}
     private static DateTime tiempo = DateTime.Now;
     public static DateTime GetTiempo(){return tiempo;}
+    public static string nombreUsuario{get;set;}
     public static bool ResolverSala(int Sala, string Incognita){
         if (Sala == estadoJuego && Incognita.ToUpper() == incognitasSalas[Sala-1]){
             estadoJuego++;

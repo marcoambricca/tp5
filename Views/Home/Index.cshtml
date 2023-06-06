@@ -2,12 +2,13 @@
     ViewData["Title"] = "Index";
 }
 
-
 <div class="container p-5 my-5 bg-dark text-white">
     <h1>Bienvenidos a nuestra sala de escape!</h1>
     <span>Resolve todos los acertijos para escapar en el menor tiempo posible.</span>
     <br>
-    <form action='@Url.Action("Habitacion", "Home")'>
+    <form action='@Url.Action("Index", "Home")'>
+        <p>Escriba su nombre</p>
+        <input type="text" name="nombre" required>
         <button class="btn btn-primary">Comenzar</button>
     </form>
 </div>

@@ -1,9 +1,10 @@
 <div class="container p-5 my-5 bg-dark text-white">
-    <p>@ViewBag.tiempo</p>
+    <span class="reloj">@ViewBag.minutos : @ViewBag.segundos</span><br><br>
     <img src="/img/acertijo2.jpg" alt="acertijo2" class="img-thumbnail">
     <span class="ms-5">¿Que caracter falta?</span>
     <form class="mt-5" action='@Url.Action("Habitacion", "Home")'>
         <input type="hidden" name="sala" value="2">
+        <p>Escribi tu respuesta @ViewBag.nombre</p>
         <input type="text" name="clave" value="">
         <input type="submit" class="btn btn-outline-primary">
     </form>
